@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puerto Peñasco</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#faq").accordion();
+        });
+
+        $(function () {
+            $(".datepicker").datepicker();
+        });
+
+        $(function () {
+            $(document).tooltip();
+        });
+
+        window.setInterval(changePic, 4000);
+        var num = 0
+
+        function changePic() {
+            num += 1
+            console.log(num)
+
+            if (num === 1) {
+                document.getElementById("pic-container").style.backgroundImage = "url('/images/room.jpg')"
+            }
+
+            if (num === 2) {
+                document.getElementById("pic-container").style.backgroundImage = "url('/images/room4.jpg')"
+            }
+
+            if (num === 3) {
+                document.getElementById("pic-container").style.backgroundImage = "url('/images/room3.jpg')"
+            }
+
+            if (num === 4) {
+                document.getElementById("pic-container").style.backgroundImage = "url('/images/puerto-peñasco-V3.jpeg')"
+                num = 0
+            }
+        }
+    </script>
+
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0px;
+        }
+
+        #pic-container {
+            background-image: url("/images/puerto-peñasco-V3.jpeg");
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            height: 50%;
+
+            /* filter: brightness(1.25); */
+
+            border-bottom: 4px solid #8E9DCC;
+        }
+
+        #nav-area {
+            width: auto;
+        }
+
+        nav {
+            background-color: #D9DBF1;
+        }
+
+        #title {
+            font-size: 36px;
+            font-family: 'Red Hat Display', sans-serif;
+            text-align: left;
+            list-style-type: none;
+
+            margin-left: 20px;
+            margin-top: 0;
+            padding-top: 8px;
+        }
+
+        #one1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            background-color: #8E9DCC;
+        }
+
+        .item {
+            color: #F9F9ED;
+            display: inline;
+            padding: 5px;
+
+            font-size: 18px;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+
+        .item:hover {
+            background-color: #7D84B2;
+        }
+
+        #avail-check {
+            font-size: 36px;
+            font-family: 'Red Hat Display', sans-serif;
+            text-align: center;
+            text-decoration: underline solid black 1px;
+            margin-bottom: -2%;
+        }
+
+
+        #date {
+            background-color: #7D84B2;
+            color: #F9F9ED;
+
+            width: 75%;
+            height: auto;
+            margin: auto;
+            margin-top: 3.5%;
+
+            border-radius: 20px;
+            padding: 2%;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+
+        .res-li {
+            display: inline;
+            padding: 2%;
+        }
+
+        #freq {
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 36px;
+            text-align: center;
+
+            text-decoration: underline solid black 1px;
+        }
+
+        .ui-accordion-header {
+            background-color: #D9DBF1;
+            border-color: #7D84B2;
+            color: black;
+        }
+
+        .ui-accordion-header.ui-state-active {
+            background-color: #8E9DCC;
+            border-color: #7D84B2;
+            color: #F9F9ED;
+        }
+
+         #map-nd-gallery {
+            display: flex;
+            flex-direction: row;
+        } 
+
+        #res-info{
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 18px;
+            width: 45%;
+
+            margin-right: 5%;
+            margin-left: 5%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav-area">
+        <nav>
+            <p id="title">Lavender Resort, Puerto Peñasco</p>
+
+            <ul id="one1">
+
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Reservation</li>
+                <li class="item">Contact</li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="pic-container">
+
+    </div>
+
+
+    <div id="map-nd-gallery">
+        <p id="res-info">Welcome to Lavender Resort, the place of your dreams. Set in Puerto Peñasco, we offer a wide variety of fun
+            activities, along with being just near the main city. Enjoy parasailing, the banana boat, or even take the
+            whole family on a cruise and watch the sea animals, like dolphins and whales! <br> <br>The resort also offers a
+            restauraunt, gift shop, and reception services downstairs. Not just that, but a pool and a hot tub for
+            relaxing in after being in the ocean. The beach is a few minutes walk from your condo, so what are you
+            waiting for?</p>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109049.6015254582!2d-113.588692306672!3d31.336894759113953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x812ba5b44ea74411%3A0x4349796169c75fb3!2sPuerto%20Pe%C3%B1asco%2C%20Sonora%2C%20Mexico!5e0!3m2!1sen!2sus!4v1670887440024!5m2!1sen!2sus"
+                width="45%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" id="mappie">
+            </iframe>
+
+    </div>
+
+    <datalist id="dinosaur">
+        <option value="1" label="1"></option>
+        <option value="2" label="2"></option>
+        <option value="3" label="3"></option>
+    </datalist>
+
+    <datalist id="hiHi">
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+        <option value="5"></option>
+    </datalist>
+
+    <div id="main-container">
+
+        <p id="avail-check">
+            Check for Available Condos
+        </p>
+
+        <div id="date">
+
+            <div>
+                <label class="res-li">Day of Arrival<input type="text" class="datepicker"
+                        title="Check-In time varies per room."></label><br>
+            </div>
+
+            <div>
+                <label class="res-li">Day of Departure<input type="text" class="datepicker"
+                        title="Check-Out time varies per room."></label><br>
+            </div>
+
+            <div>
+                <label class="res-li">Bedrooms<input type="range" title="1-3 bedrooms per condo." min="1" max="3"
+                        list="dinosaur"></label><br>
+            </div>
+
+            <div>
+                <label class="res-li">Condos<input type="list" list="hiHi"
+                        title="Contact front desk for reservations over 5 condos."></label><br>
+            </div>
+
+        </div>
+
+
+
+        <p id="freq">Frequently Asked Questions</p>
+
+        <div id="faq">
+            <h3>Can I cancel my reservation for a full refund?</h3>
+            <div>
+                <p>We accept cancellations up to 7 days before the reserved day(s) for a full refund. Anything after
+                    7 days is not subject to a refund.</p>
+            </div>
+
+            <h3>What is allowed in the resort?</h3>
+            <div>
+                <p>We allow most things (excluding objects with possible safety and wellbeing concerns) into our condos.
+                    By the pool, we ask that guests keep track of their belongings. We are not responsible for any lost
+                    items. The beach is public, so guests can bring anything. </p>
+            </div>
+
+            <h3>Can I reserve over 5 condos?</h3>
+            <div>
+                <p>We do allow guests to reserve more than 5 condos, but we ask that they will have to contact our front
+                    desk for
+                    further information about availability and possible accommodations.</p>
+            </div>
+
+            <h3>Who can I contact for other questions?</h3>
+            <div>
+                <p>Our reception desk is available to provide additional guidance everyday from 6 am to 7 pm.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
